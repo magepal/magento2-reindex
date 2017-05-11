@@ -19,3 +19,6 @@ composer require magepal/magento2-reindex
 #### 2 - Enable Reindex (from {Magento root} folder)
  * php -f bin/magento module:enable --clear-static-content MagePal_Reindex
  * php -f bin/magento setup:upgrade
+
+
+![image](https://cloud.githubusercontent.com/assets/1415141/25950557/5b88aca4-3629-11e7-9567-f238baeef379.png)
