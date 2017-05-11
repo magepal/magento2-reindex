@@ -1,0 +1,33 @@
+{
+    "name": "magepal/magento2-reindex",
+    "description": "Reindex Magento 2 from Admin",
+    "keywords": [
+        "magento 2",
+        "magento2",
+        "reindex",
+        "backend reindex",
+        "admin reindex"
+    ],
+    "require": {
+        "php": "~5.5.0|~5.6.0|~7.0.0",
+        
+        "magento/magento-composer-installer": "*"
+    },
+    "suggest": {
+
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MagePal\\Reindex\\": ""
+        }
+    }
+}
