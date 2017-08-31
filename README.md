@@ -22,3 +22,8 @@ composer require magepal/magento2-reindex
 
 
 ![image](https://cloud.githubusercontent.com/assets/1415141/25950557/5b88aca4-3629-11e7-9567-f238baeef379.png)
+
+
+----
+
+Need help setting up or want to customize this extension to meet your business needs? Please email support@magepal.com and if we like your idea we will add this feature for free or at a discounted rate.
