@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2017 MagePal, Inc. All rights reserved.
+ * Copyright © 2017 MagePal, LLC. All rights reserved.
  * See COPYING.txt for license details.
  */
 namespace MagePal\Reindex\Controller\Adminhtml;
