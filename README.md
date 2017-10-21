@@ -20,8 +20,9 @@ composer require magepal/magento2-reindex
  * php -f bin/magento module:enable --clear-static-content MagePal_Reindex
  * php -f bin/magento setup:upgrade
 
+![Reindex Magento2](https://user-images.githubusercontent.com/1415141/31852506-d2ba9d3a-b646-11e7-8ec2-876c2db83626.gif)
 
-![image](https://cloud.githubusercontent.com/assets/1415141/25950557/5b88aca4-3629-11e7-9567-f238baeef379.png)
+![Magento 2 Reindex](https://cloud.githubusercontent.com/assets/1415141/25950557/5b88aca4-3629-11e7-9567-f238baeef379.png)
 
 
 ----
