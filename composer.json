@@ -1,6 +1,6 @@
 {
     "name": "magepal/magento2-reindex",
-    "description": "Reindex Magento 2 from Admin",
+    "description": "Reindex your Magento2 store quickly and easily from backend/admin, instead of command line.",
     "keywords": [
         "magento 2",
         "magento2",
