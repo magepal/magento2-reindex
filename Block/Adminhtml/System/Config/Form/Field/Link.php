@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2017 MagePal LLC. All rights reserved.
+ * Copyright © MagePal LLC. All rights reserved.
  * See COPYING.txt for license details.
  */
 
@@ -8,7 +8,6 @@ namespace MagePal\Reindex\Block\Adminhtml\System\Config\Form\Field;
 
 class Link extends \Magento\Config\Block\System\Config\Form\Field
 {
-
 
     /**
      * @param \Magento\Backend\Block\Template\Context $context
@@ -34,7 +33,6 @@ class Link extends \Magento\Config\Block\System\Config\Form\Field
         return parent::render($element);
     }
 
-
     /**
      * Return element html
      *
@@ -44,12 +42,10 @@ class Link extends \Magento\Config\Block\System\Config\Form\Field
      */
     protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element)
     {
-        return sprintf('<a href ="%s">%s</a>',
+        return sprintf(
+            '<a href ="%s">%s</a>',
                     $this->_urlBuilder->getUrl('indexer/indexer/list'),
                     __('System > Tools > Index Management')
         );
     }
-
-
-
 }

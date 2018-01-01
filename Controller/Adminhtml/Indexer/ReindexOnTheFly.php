@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2017 MagePal LLC. All rights reserved.
+ * Copyright © MagePal LLC. All rights reserved.
  * See COPYING.txt for license details.
  */
 namespace MagePal\Reindex\Controller\Adminhtml\Indexer;
@@ -36,14 +36,13 @@ class ReindexOnTheFly extends \MagePal\Reindex\Controller\Adminhtml\Indexer
             $this->messageManager->addError(__('Please select indexers.'));
         } else {
             try {
-
                 foreach ($indexerIds as $indexerId) {
                     $indexer = $this->indexerFactory->create();
                     $indexer->load($indexerId)->reindexAll();
-
                 }
 
-                $this->messageManager->addSuccess(__('Reindex %1 indexer(s).', count($indexerIds))
+                $this->messageManager->addSuccess(
+                    __('Reindex %1 indexer(s).', count($indexerIds))
                 );
             } catch (\Magento\Framework\Exception\LocalizedException $e) {
                 $this->messageManager->addError($e->getMessage());
