@@ -5,7 +5,7 @@
 
 Reindex your Magento 2 store quickly and easily from backend/admin. Ideal for project managers or QA department during site development and not meant to be used in large production environment.
 
-![Magento Reindex](https://user-images.githubusercontent.com/1415141/31852790-2f78558a-b64c-11e7-981f-b17ae44d4ab1.gif)
+![Magento Reindex](https://image.ibb.co/ihvetH/Reindex_Magento_2_from_Admin_by_Magepal.gif)
 
 ## Installation
 
