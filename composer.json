@@ -18,6 +18,14 @@
     "license": [
         "proprietary"
     ],
+    "authors": [
+        {
+            "name": "MagePal",
+            "email": "hello@magepal.com",
+            "homepage": "http://www.magepal.com/",
+            "role": "Leader"
+        }
+    ],
     "autoload": {
         "files": [
             "registration.php"
