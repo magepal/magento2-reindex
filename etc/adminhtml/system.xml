@@ -3,6 +3,7 @@
 /**
  * Copyright © MagePal LLC. All rights reserved.
  * See COPYING.txt for license details.
+ * http://www.magepal.com | support@magepal.com
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
@@ -18,7 +19,7 @@
 				<attribute type="expanded">1</attribute>
 				<label>About MagePal Reindex</label>
 				<comment><![CDATA[ <strong>Copyright © 2018 <a href="http://bit.ly/MPEXRI" target="_blank">www.magepal.com</a> / <a href="mailto:support@magepal.com">support@magepal.com</a></strong><br />
-                    Thanks for choosing MagePal Extensions. Trusted by 1000's of developers worldwide.<br/><br/>
+                    Thanks for choosing MagePal Extensions. Trusted by 1000s of developers worldwide.<br/><br/>
                     <hr style="border-top: 1px solid #e3e3e3" /> ]]></comment>
 				<field id="module_version" translate="label" type="label" sortOrder="0" showInDefault="1" showInWebsite="0" showInStore="0">
 					<label>Module Version</label>
