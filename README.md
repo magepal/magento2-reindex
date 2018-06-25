@@ -5,9 +5,23 @@
 [![Total Downloads](https://poser.pugx.org/magepal/magento2-reindex/downloads)](https://packagist.org/packages/magepal/magento2-reindex)
 [![Latest Stable Version](https://poser.pugx.org/magepal/magento2-reindex/v/stable)](https://packagist.org/packages/magepal/magento2-reindex)
 
-Reindex your Magento 2 store quickly and easily from backend/admin. Ideal for project managers or QA department during site development and not meant to be used in large production environment.
+Reindexing your Magento 2 store from Magento's admin has be removed and your only option is to set your indexes to "Update on Save" or reindex using SSH / CLI commandline which is time consuming. With our free Reindex module for Magento 2 you can quickly and easily update indivdiual or all indexes from within your Magento admin. Ideal for project managers or QA department during site development and testing of new product and functionality. This module is not meant for large production environment.
 
 ![Magento Reindex](https://image.ibb.co/ihvetH/Reindex_Magento_2_from_Admin_by_Magepal.gif)
+
+Indexes
+
+```
+catalog_category_product                 Category Products
+catalog_product_category                 Product Categories
+catalog_product_price                    Product Price
+catalog_product_attribute                Product EAV
+cataloginventory_stock                   Stock
+catalogrule_rule                         Catalog Rule Product
+catalogrule_product                      Catalog Product Rule
+catalogsearch_fulltext                   Catalog Search
+```
+
 
 ## Installation
 
