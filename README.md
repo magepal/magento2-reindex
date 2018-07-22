@@ -39,6 +39,16 @@ composer require magepal/magento2-reindex
 #### Step 2 - Enable Reindex (from {Magento root} folder)
  * php -f bin/magento module:enable --clear-static-content MagePal_Reindex
  * php -f bin/magento setup:upgrade
+ 
+#### How to Reindex Magento2 (from Admin with extension)
+
+![Magento2 how to Reindex](https://image.ibb.co/nt4GDd/how_to_reindex_magento2.png)
+
+ * Admin > Index Management > Select Index Checkbox > Index Action > Reindex > Submit
+
+#### Reindex from Command Line - One or more indexers are invalid
+
+> php bin/magento indexer:reindex
 
 Contribution
 ---
