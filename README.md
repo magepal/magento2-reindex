@@ -46,7 +46,7 @@ composer require magepal/magento2-reindex
 
 ![Magento2 how to Reindex](https://image.ibb.co/nt4GDd/how_to_reindex_magento2.png)
 
- * Admin > Index Management > Select Index Checkbox > Index Action > Reindex > Submit
+ * Admin > System > Index Management > Select Index Checkbox > Index Action > Reindex > Submit
 
 #### How to reindex your Magento 2 store from Command Line - One or more indexers are invalid
 
