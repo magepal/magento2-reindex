@@ -6,22 +6,26 @@
  */
 namespace MagePal\Reindex\Controller\Adminhtml\Indexer;
 
+use Exception;
 use Magento\Backend\App\Action\Context;
+use Magento\Framework\Indexer\IndexerInterface;
+use Magento\Indexer\Model\IndexerFactory;
+use MagePal\Reindex\Controller\Adminhtml\Indexer;
 
-class ReindexOnTheFly extends \MagePal\Reindex\Controller\Adminhtml\Indexer
+class ReindexOnTheFly extends Indexer
 {
 
-    /** @var \Magento\Framework\Indexer\IndexerInterface  */
+    /** @var IndexerInterface  */
     protected $indexerFactory;
 
     /**
      * Index constructor.
      * @param Context $context
-     * @param \Magento\Indexer\Model\IndexerFactory $indexerFactory
+     * @param IndexerFactory $indexerFactory
      */
     public function __construct(
         Context $context,
-        \Magento\Indexer\Model\IndexerFactory $indexerFactory
+        IndexerFactory $indexerFactory
     ) {
         $this->indexerFactory = $indexerFactory;
         parent::__construct($context);
@@ -34,7 +38,7 @@ class ReindexOnTheFly extends \MagePal\Reindex\Controller\Adminhtml\Indexer
     {
         $indexerIds = $this->getRequest()->getParam('indexer_ids');
         if (!is_array($indexerIds)) {
-            $this->messageManager->addError(__('Please select indexers.'));
+            $this->messageManager->addErrorMessage(__('Please select indexers.'));
         } else {
             try {
                 foreach ($indexerIds as $indexerId) {
@@ -42,13 +46,11 @@ class ReindexOnTheFly extends \MagePal\Reindex\Controller\Adminhtml\Indexer
                     $indexer->load($indexerId)->reindexAll();
                 }
 
-                $this->messageManager->addSuccess(
+                $this->messageManager->addSuccessMessage(
                     __('Reindex %1 indexer(s).', count($indexerIds))
                 );
-            } catch (\Magento\Framework\Exception\LocalizedException $e) {
-                $this->messageManager->addError($e->getMessage());
-            } catch (\Exception $e) {
-                $this->messageManager->addException(
+            } catch (Exception $e) {
+                $this->messageManager->addExceptionMessage(
                     $e,
                     __("We couldn't reindex because of an error.")
                 );
