@@ -7,28 +7,22 @@
 
 namespace MagePal\Reindex\Block\Adminhtml\System\Config\Form\Field;
 
-class Link extends \Magento\Config\Block\System\Config\Form\Field
+use Magento\Config\Block\System\Config\Form\Field;
+use Magento\Framework\Data\Form\Element\AbstractElement;
+
+/**
+ * Class Link
+ * @package MagePal\Reindex\Block\Adminhtml\System\Config\Form\Field
+ */
+class Link extends Field
 {
-
-    /**
-     * @param \Magento\Backend\Block\Template\Context $context
-     * @param array $data
-     */
-    public function __construct(
-        \Magento\Backend\Block\Template\Context $context,
-        array $data = []
-    ) {
-        parent::__construct($context, $data);
-    }
-
     /**
      * Render button
      *
-     * @param  \Magento\Framework\Data\Form\Element\AbstractElement $element
+     * @param  AbstractElement $element
      * @return string
-     * @throws \Magento\Framework\Exception\LocalizedException
      */
-    public function render(\Magento\Framework\Data\Form\Element\AbstractElement $element)
+    public function render(AbstractElement $element)
     {
         // Remove scope label
         $element->unsScope()->unsCanUseWebsiteValue()->unsCanUseDefaultValue();
@@ -38,16 +32,16 @@ class Link extends \Magento\Config\Block\System\Config\Form\Field
     /**
      * Return element html
      *
-     * @param  \Magento\Framework\Data\Form\Element\AbstractElement $element
+     * @param  AbstractElement $element
      * @return string
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
-    protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element)
+    protected function _getElementHtml(AbstractElement $element)
     {
         return sprintf(
             '<a href ="%s">%s</a>',
-                    $this->_urlBuilder->getUrl('indexer/indexer/list'),
-                    __('System > Tools > Index Management')
+            $this->_urlBuilder->getUrl('indexer/indexer/list'),
+            __('System > Tools > Index Management')
         );
     }
 }
