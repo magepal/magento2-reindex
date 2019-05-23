@@ -32,21 +32,12 @@ By default, you can set your store indexers to "Update on Save" or "Update by Sc
 ```
 composer require magepal/magento2-reindex
 ```
-##### Manually (not recommended)
- * Download the extension
- * Unzip the file
- * Create a folder {Magento 2 root}/app/code/MagePal/Reindex
- * Copy the content from the unzip folder
 
-#### Step 2 - Enable Reindex (from {Magento root} folder)
- * php -f bin/magento module:enable --clear-static-content MagePal_Reindex
- * php -f bin/magento setup:upgrade
- 
-#### How to Reindex Magento2 (from Admin with extension)
+## Documentation
 
-![Magento2 how to Reindex](https://image.ibb.co/nt4GDd/how_to_reindex_magento2.png)
+[How to Installing Reindex for Magento2](https://www.magepal.com/help/docs/how-to-reindex-magento-2/#installation)
 
- * Admin > System > Index Management > Select Index Checkbox > Index Action > Reindex > Submit
+[How to setup Reindex for Magento2](https://www.magepal.com/help/docs/how-to-reindex-magento-2/#configuration)
 
 #### How to reindex your Magento 2 store from Command Line - One or more indexers are invalid
 
