@@ -35,9 +35,9 @@ composer require magepal/magento2-reindex
 
 ## Documentation
 
-[How to Installing Reindex for Magento2](https://www.magepal.com/help/docs/how-to-reindex-magento-2/#installation)
+ - [How to Installing Reindex for Magento2](https://www.magepal.com/help/docs/how-to-reindex-magento-2/#installation)
 
-[How to setup Reindex for Magento2](https://www.magepal.com/help/docs/how-to-reindex-magento-2/#configuration)
+ - [How to setup Reindex for Magento2](https://www.magepal.com/help/docs/how-to-reindex-magento-2/#configuration)
 
 #### How to reindex your Magento 2 store from Command Line - One or more indexers are invalid
 
