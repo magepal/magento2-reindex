@@ -35,7 +35,7 @@ composer require magepal/magento2-reindex
 
 ## Documentation
 
- - [How to Installing Reindex for Magento2](https://www.magepal.com/help/docs/how-to-reindex-magento-2/#installation)
+ - [How to Install Reindex for Magento2](https://www.magepal.com/help/docs/how-to-reindex-magento-2/#installation)
 
  - [How to setup Reindex for Magento2](https://www.magepal.com/help/docs/how-to-reindex-magento-2/#configuration)
 
