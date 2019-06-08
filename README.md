@@ -1,6 +1,6 @@
 <a href="http://www.magepal.com" title="Magento Extension"><img src="https://image.ibb.co/dHBkYH/Magepal_logo.png" width="100" align="right" alt="Magento2 plugins" /></a>
 
-## Reindex Magento 2 from Admin
+# Reindex Magento 2 from Admin
 
 [![Total Downloads](https://poser.pugx.org/magepal/magento2-reindex/downloads)](https://packagist.org/packages/magepal/magento2-reindex)
 [![Latest Stable Version](https://poser.pugx.org/magepal/magento2-reindex/v/stable)](https://packagist.org/packages/magepal/magento2-reindex)
