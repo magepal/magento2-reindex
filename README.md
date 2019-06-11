@@ -41,6 +41,8 @@ composer require magepal/magento2-reindex
 
 #### How to reindex your Magento 2 store from Command Line - One or more indexers are invalid
 
+Reindex Magento Data via SSH (from Magento root folder)
+
 > php bin/magento indexer:reindex
 
 Contribution
