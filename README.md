@@ -25,19 +25,16 @@ catalogsearch_fulltext                   Catalog Search
 #### Magento Store Reindex Mode
 By default, you can set your store indexers to "Update on Save" or "Update by Schedule". Setting your Magento store to index on save will update your indexes when admin changes occur, while update by schedule only run at a set interval by your cron job. In your server cron must be set up correctly for "Update by Schedule" to work which must be set up by a developer, system admin or hosting company.
 
-### Installation
-
-#### Step 1
-##### Using Composer (recommended)
-```
-composer require magepal/magento2-reindex
-```
-
 ### Documentation
 
  - [How to Install Reindex for Magento2](https://www.magepal.com/help/docs/how-to-reindex-magento-2/#installation)
 
  - [How to setup Reindex for Magento2](https://www.magepal.com/help/docs/how-to-reindex-magento-2/#configuration)
+ 
+### Installation Using Composer (recommended)
+```
+composer require magepal/magento2-reindex
+```
 
 #### How to reindex your Magento 2 store from Command Line - One or more indexers are invalid
 
