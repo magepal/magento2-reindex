@@ -44,7 +44,6 @@ class Version extends Field
      *
      * @param  AbstractElement $element
      * @return string
-     * @throws LocalizedException
      */
     public function render(AbstractElement $element)
     {
@@ -74,15 +73,5 @@ class Version extends Field
     {
         $moduleInfo = $this->_moduleList->getOne($this->getModuleName());
         return $moduleInfo['setup_version'];
-    }
-
-    /**
-     * @return string
-     */
-    public function getModuleName()
-    {
-        $classArray = explode('\\', get_class($this));
-
-        return count($classArray) > 2 ? "{$classArray[0]}_{$classArray[1]}" : '';
     }
 }

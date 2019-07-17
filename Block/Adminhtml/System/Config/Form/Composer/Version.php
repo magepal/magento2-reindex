@@ -95,16 +95,6 @@ class Version extends Field
     }
 
     /**
-     * @return string
-     */
-    public function getModuleName()
-    {
-        $classArray = explode('\\', get_class($this));
-
-        return count($classArray) > 2 ? "{$classArray[0]}_{$classArray[1]}" : '';
-    }
-
-    /**
      * Get module composer version
      *
      * @param $moduleName
