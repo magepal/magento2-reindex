@@ -18,8 +18,7 @@ use Magento\Framework\Filesystem\Directory\ReadFactory;
 use Magento\Framework\Phrase;
 
 /**
- * Class Version
- * @package MagePal\Reindex\Block\Adminhtml\System\Config\Form\Composer
+ * Admin block class for composer version
  */
 class Version extends Field
 {
@@ -110,15 +109,15 @@ class Version extends Field
         try {
             $directoryRead = $this->readFactory->create($path);
             $composerJsonData = $directoryRead->readFile('composer.json');
-
             if ($composerJsonData) {
                 $data = json_decode($composerJsonData);
-                return !empty($data->version) ? $data->version : __('Unknown');
+                if (!empty($data->version)) {
+                    return $data->version;
+                }
             }
+            return __('Unknown');
         } catch (Exception $e) {
-            //
+            return __('Unknown');
         }
-
-        return 'Unknown';
     }
 }

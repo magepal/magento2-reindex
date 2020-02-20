@@ -10,12 +10,10 @@ namespace MagePal\Reindex\Block\Adminhtml\System\Config\Form\Module;
 use Magento\Backend\Block\Template\Context;
 use Magento\Config\Block\System\Config\Form\Field;
 use Magento\Framework\Data\Form\Element\AbstractElement;
-use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Module\ModuleListInterface;
 
 /**
- * Class Version
- * @package MagePal\Reindex\Block\Adminhtml\System\Config\Form\Module
+ * Admin block class for module version
  */
 class Version extends Field
 {

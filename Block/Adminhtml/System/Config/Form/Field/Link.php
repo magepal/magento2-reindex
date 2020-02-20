@@ -11,8 +11,7 @@ use Magento\Config\Block\System\Config\Form\Field;
 use Magento\Framework\Data\Form\Element\AbstractElement;
 
 /**
- * Class Link
- * @package MagePal\Reindex\Block\Adminhtml\System\Config\Form\Field
+ * Admin block class for index management link
  */
 class Link extends Field
 {
