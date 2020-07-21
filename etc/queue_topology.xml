@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/topology.xsd">
+    <exchange name="magepal-reindex-exchange" type="topic" connection="db">
+        <binding id="MagePalReindex" topic="magepal.reindex" destinationType="queue" destination="magepal_reindex"/>
+    </exchange>
+</config>
