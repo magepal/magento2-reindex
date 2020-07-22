@@ -23,7 +23,7 @@ class StrategyResolver
 
     public function resolve(string $strategy) : StrategyInterface
     {
-        if (!in_array($strategy, $this->strategies, true)) {
+        if (!array_key_exists($strategy, $this->strategies)) {
             throw new InputException(__("Invalid Strategy Key: $strategy"));
         }
 

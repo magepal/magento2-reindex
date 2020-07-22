@@ -7,6 +7,7 @@ use Magento\Framework\MessageQueue\PublisherInterface;
 
 class Deferred implements StrategyInterface
 {
+    const STRATEGY_KEY = 'deferred';
     const TOPIC_NAME = 'magepal.reindex';
 
     private $publisher;

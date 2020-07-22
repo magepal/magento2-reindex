@@ -7,6 +7,8 @@ use MagePal\Reindex\Model\Reindex;
 
 class Standard implements StrategyInterface
 {
+    const STRATEGY_KEY = 'standard';
+
     private $reindexService;
 
     public function __construct(Reindex $reindexService)

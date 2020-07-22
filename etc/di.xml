@@ -3,8 +3,7 @@
     <preference for="MagePal\Reindex\Api\SubscriberInterface" type="MagePal\Reindex\Model\Subscriber" />
 
     <preference for="MagePal\Reindex\Api\ReindexInterface" type="MagePal\Reindex\Model\Reindex" />
-<!--    <preference for="MagePal\Reindex\Api\StrategyInterface" type="MagePal\Reindex\Model\Strategies\Standard" />-->
-    <preference for="MagePal\Reindex\Api\StrategyInterface" type="MagePal\Reindex\Model\Strategies\Deferred" />
+    <preference for="MagePal\Reindex\Api\StrategyInterface" type="MagePal\Reindex\Model\Strategy" />
 
     <type name="MagePal\Reindex\Model\Adminhtml\System\Config\Source\Strategy">
         <arguments>
