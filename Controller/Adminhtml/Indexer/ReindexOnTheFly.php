@@ -50,11 +50,19 @@ class ReindexOnTheFly extends Indexer
         } else {
             try {
                 $this->reindexStrategy->process($indexerIds);
-                $this->messageManager->addSuccessMessage(__('Reindex triggered for %1 indexer(s).', count($indexerIds)));
+                $this->messageManager->addSuccessMessage(
+                    __('Reindex triggered for %1 indexer(s).', count($indexerIds))
+                );
             } catch (InputException | LocalizedException $e) {
-                $this->messageManager->addExceptionMessage($e, __("We couldn't reindex because of an error: {$e->getMessage()}"));
+                $this->messageManager->addExceptionMessage(
+                    $e,
+                    __("We couldn't reindex because of an error: {$e->getMessage()}")
+                );
             } catch (Exception $e) {
-                $this->messageManager->addExceptionMessage($e, __("We couldn't reindex because of an error."));
+                $this->messageManager->addExceptionMessage(
+                    $e,
+                    __("We couldn't reindex because of an error.")
+                );
             }
         }
 
