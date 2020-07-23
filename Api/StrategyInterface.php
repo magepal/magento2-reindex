@@ -8,9 +8,14 @@
 namespace MagePal\Reindex\Api;
 
 /**
+ * Handles strategy for reindexing from backend. Process now, defer to message queue etc.
+ *
  * @api
  */
 interface StrategyInterface
 {
+    /**
+     * @param array|null $indexIds
+     */
     public function process(array $indexIds = null) : void;
 }

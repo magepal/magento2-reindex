@@ -14,9 +14,17 @@ class StrategyResolver
 {
     const XML_STRATEGY_PATH = 'magepal_reindex/about/strategy';
 
+    /** @var ScopeConfigInterface */
     private $scopeConfig;
+
+    /** @var array */
     private $strategies;
 
+    /**
+     * StrategyResolver constructor.
+     * @param ScopeConfigInterface $scopeConfigInterface
+     * @param array $strategies
+     */
     public function __construct(
         ScopeConfigInterface $scopeConfigInterface,
         array $strategies
@@ -25,6 +33,13 @@ class StrategyResolver
         $this->strategies = $strategies;
     }
 
+    /**
+     * Resolve a strategy key to its correct class
+     *
+     * @param string $strategy
+     * @return StrategyInterface
+     * @throws InputException
+     */
     public function resolve(string $strategy) : StrategyInterface
     {
         if (!array_key_exists($strategy, $this->strategies)) {
@@ -34,11 +49,22 @@ class StrategyResolver
         return $this->strategies[$strategy];
     }
 
+    /**
+     * Handle resolving the current active strategy from system config to a class
+     *
+     * @return StrategyInterface
+     * @throws InputException
+     */
     public function resolveActive() : StrategyInterface
     {
         return $this->resolve($this->getActiveStrategy());
     }
 
+    /**
+     * Get the active indexation strategy key from the backend
+     *
+     * @return string
+     */
     public function getActiveStrategy() : string
     {
         return $this->scopeConfig->getValue(self::XML_STRATEGY_PATH);

@@ -12,5 +12,8 @@ namespace MagePal\Reindex\Api;
  */
 interface SubscriberInterface
 {
+    /**
+     * @param array $indices
+     */
     public function processMessage(array $indices) : void;
 }

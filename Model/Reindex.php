@@ -11,13 +11,23 @@ use MagePal\Reindex\Api\ReindexInterface;
 
 class Reindex implements ReindexInterface
 {
+    /** @var IndexerFactory */
     private $indexerFactory;
 
+    /**
+     * Reindex constructor.
+     * @param IndexerFactory $indexerFactory
+     */
     public function __construct(IndexerFactory $indexerFactory)
     {
         $this->indexerFactory = $indexerFactory;
     }
 
+    /**
+     * Implements synchronous reindexing
+     *
+     * @param array|null $indexIds
+     */
     public function reindex(array $indexIds = null) : void
     {
         foreach ($indexIds as $index) {

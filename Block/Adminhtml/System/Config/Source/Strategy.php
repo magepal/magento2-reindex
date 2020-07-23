@@ -4,19 +4,27 @@
  * See COPYING.txt for license details.
  * http://www.magepal.com | support@magepal.com
  */
-namespace MagePal\Reindex\Model\Adminhtml\System\Config\Source;
+namespace MagePal\Reindex\Block\Adminhtml\System\Config\Source;
 
-use Magento\Framework\Option\ArrayInterface;
+use Magento\Framework\Data\OptionSourceInterface;
 
-class Strategy implements ArrayInterface
+class Strategy implements OptionSourceInterface
 {
+    /** @var array */
     private $strategies;
 
+    /**
+     * Strategy constructor.
+     * @param array $strategies
+     */
     public function __construct(array $strategies)
     {
         $this->strategies = $strategies;
     }
 
+    /**
+     * @return array
+     */
     public function toOptionArray() : array
     {
         $options = [];

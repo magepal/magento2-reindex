@@ -61,7 +61,7 @@
 
 				<field id="strategy" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
 					<label>Strategy</label>
-					<source_model>MagePal\Reindex\Model\Adminhtml\System\Config\Source\Strategy</source_model>
+					<source_model>MagePal\Reindex\Block\Adminhtml\System\Config\Source\Strategy</source_model>
 				</field>
 			</group>
 		</section>
