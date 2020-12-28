@@ -8,15 +8,21 @@ namespace MagePal\Reindex\Controller\Adminhtml\Indexer;
 
 use Exception;
 use Magento\Backend\App\Action\Context;
+use Magento\Framework\Exception\InputException;
+use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Indexer\IndexerInterface;
 use Magento\Indexer\Model\IndexerFactory;
 use MagePal\Reindex\Controller\Adminhtml\Indexer;
+use MagePal\Reindex\Api\StrategyInterface;
 
 class ReindexOnTheFly extends Indexer
 {
 
     /** @var IndexerInterface  */
     protected $indexerFactory;
+
+    /** @var StrategyInterface */
+    private $reindexStrategy;
 
     /**
      * Index constructor.
@@ -25,9 +31,11 @@ class ReindexOnTheFly extends Indexer
      */
     public function __construct(
         Context $context,
-        IndexerFactory $indexerFactory
+        IndexerFactory $indexerFactory,
+        StrategyInterface $reindexStrategy
     ) {
         $this->indexerFactory = $indexerFactory;
+        $this->reindexStrategy = $reindexStrategy;
         parent::__construct($context);
     }
 
@@ -41,13 +49,14 @@ class ReindexOnTheFly extends Indexer
             $this->messageManager->addErrorMessage(__('Please select indexers.'));
         } else {
             try {
-                foreach ($indexerIds as $indexerId) {
-                    $indexer = $this->indexerFactory->create();
-                    $indexer->load($indexerId)->reindexAll();
-                }
-
+                $this->reindexStrategy->process($indexerIds);
                 $this->messageManager->addSuccessMessage(
-                    __('Reindex %1 indexer(s).', count($indexerIds))
+                    __('Reindex triggered for %1 indexer(s).', count($indexerIds))
+                );
+            } catch (InputException | LocalizedException $e) {
+                $this->messageManager->addExceptionMessage(
+                    $e,
+                    __("We couldn't reindex because of an error: {$e->getMessage()}")
                 );
             } catch (Exception $e) {
                 $this->messageManager->addExceptionMessage(

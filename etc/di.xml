@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+/**
+ * Copyright © MagePal LLC. All rights reserved.
+ * See COPYING.txt for license details.
+ * http://www.magepal.com | support@magepal.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="MagePal\Reindex\Api\SubscriberInterface" type="MagePal\Reindex\Model\Subscriber" />
+    <preference for="MagePal\Reindex\Api\ReindexInterface" type="MagePal\Reindex\Model\Reindex" />
+    <preference for="MagePal\Reindex\Api\StrategyInterface" type="MagePal\Reindex\Model\Strategy" />
+
+    <type name="MagePal\Reindex\Block\Adminhtml\System\Config\Source\Strategy">
+        <arguments>
+            <argument name="strategies" xsi:type="array">
+                <item name="standard" xsi:type="string">Standard</item>
+                <item name="deferred" xsi:type="string">Deferred</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="MagePal\Reindex\Model\StrategyResolver">
+        <arguments>
+            <argument name="strategies" xsi:type="array">
+                <item name="standard" xsi:type="object">MagePal\Reindex\Model\Strategies\Standard</item>
+                <item name="deferred" xsi:type="object">MagePal\Reindex\Model\Strategies\Deferred</item>
+            </argument>
+        </arguments>
+    </type>
+
+</config>
+
+
