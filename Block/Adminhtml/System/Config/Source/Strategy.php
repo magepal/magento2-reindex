@@ -29,7 +29,7 @@ class Strategy implements OptionSourceInterface
     {
         $options = [];
         foreach ($this->strategies as $key => $label) {
-            $options[] = ['value' => $key, 'label' => $label];
+            $options[] = ['value' => $key, 'label' => __($label)];
         }
         return $options;
     }

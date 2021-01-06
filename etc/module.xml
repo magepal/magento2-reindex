@@ -10,6 +10,7 @@
     <module name="MagePal_Reindex" setup_version="1.0.0">
         <sequence>
             <module name="Magento_Indexer"/>
+            <module name="MagePal_Core"/>
         </sequence>
     </module>
 </config>
