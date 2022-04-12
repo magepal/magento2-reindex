@@ -15,37 +15,21 @@
 			<label>Reindex</label>
 			<tab>magepal</tab>
 			<resource>MagePal_Reindex::config_magepal_reindex</resource>
-			<group id="about" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label">
+			<group id="about_magepal" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label">
 				<attribute type="expanded">1</attribute>
 				<label>About MagePal Reindex</label>
 				<comment><![CDATA[
-                    <div id="magepal-info">
-                        Copyright © 2021 <a href="https://www.magepal.com/magento2/extensions.html?utm_source=reindex&utm_medium=admin" target="_blank">MagePal, LLC</a>
+                    <div class="magepal-info">
+                        Copyright © 2022 <a href="https://www.magepal.com/magento2/extensions.html?utm_source=reindex&utm_medium=admin" target="_blank">MagePal, LLC</a>
                         <a href="https://www.magepal.com/help/docs/how-to-reindex-magento-2/?utm_source=reindex&utm_medium=admin#documentation" target="_blank">Documentation</a>
                         <a href="https://www.magepal.com/help/docs/how-to-reindex-magento-2/?utm_source=reindex&utm_medium=admin#support">Support</a>
                         <a href="https://www.magepal.com/help/docs/how-to-reindex-magento-2?utm_source=reindex&utm_medium=admin#current_version" target="_blank">Latest Version</a>
                         <a href="https://www.magepal.com/reindex.html?utm_source=reindex&utm_medium=admin" target="_blank">Extension Detail</a>
                         <a href="https://www.magepal.com/magento2/extensions.html?utm_source=reindex&utm_medium=admin" target="_blank">More Extensions</a>
                     </div>
-                    <hr style="border-top: 1px solid #e3e3e3" />
-                    <style>
-                        #magepal-info a {
-                            font-weight: bold;
-                            border-left: 2px solid #e3e3e3;
-                            padding-left:10px;
-                            padding-right:10px;
-                            color: #ef7e1e;
-                        }
-
-                        #magepal-info a:first-child {
-                            padding-left: 5px;
-                            border-left: none;
-                        }
-
-                        #magepal-info {
-                            padding-bottom: 5px;
-                        }
-                     </style>]]></comment>
+                    <hr class="magepal-hr" />
+                    ]]>
+                </comment>
 				<field id="MagePal_Reindex" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
 					<label>Composer Version</label>
 					<frontend_model>MagePal\Core\Block\Adminhtml\System\Config\Composer\Version</frontend_model>
