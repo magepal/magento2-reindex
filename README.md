@@ -1,4 +1,4 @@
-<a href="http://www.magepal.com" title="Magento Extension"><img src="https://image.ibb.co/dHBkYH/Magepal_logo.png" width="100" align="right" alt="Magento2 plugins" /></a>
+<a href="https://www.magepal.com" title="Magento Extension"><img src="https://image.ibb.co/dHBkYH/Magepal_logo.png" width="100" align="right" alt="Magento2 plugins" /></a>
 
 # Reindex Magento 2 / Adobe Commerce from Admin
 
@@ -73,4 +73,4 @@ Magento 2 Extensions
 - [Order Confirmation Page Miscellaneous Scripts](https://www.magepal.com/magento2/extensions/order-confirmation-miscellaneous-scripts-for-magento-2.html)
 - [HTML Minifier for Magento2](https://www.magepal.com/magento2/extensions/html-minifier.html)
 
-© MagePal LLC. | [www.magepal.com](http://www.magepal.com "Magento 2.2 Extensions Marketplace")
+© MagePal LLC. | [www.magepal.com](https://www.magepal.com "Magento 2.2 Extensions Marketplace")
