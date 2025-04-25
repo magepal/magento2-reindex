@@ -27,7 +27,7 @@ class Strategy implements StrategyInterface
      * @param array|null $indexIds
      * @throws \Magento\Framework\Exception\InputException
      */
-    public function process(array $indexIds = null) : void
+    public function process(?array $indexIds = null) : void
     {
         $this->resolver->resolveActive()->process($indexIds);
     }

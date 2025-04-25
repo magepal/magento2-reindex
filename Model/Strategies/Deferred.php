@@ -32,7 +32,7 @@ class Deferred implements StrategyInterface
      *
      * @param array|null $indexIds
      */
-    public function process(array $indexIds = null) : void
+    public function process(?array $indexIds = null) : void
     {
         $this->publisher->publish(self::TOPIC_NAME, $indexIds);
     }

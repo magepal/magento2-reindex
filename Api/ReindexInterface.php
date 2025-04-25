@@ -17,5 +17,5 @@ interface ReindexInterface
     /**
      * @param array|null $indexIds
      */
-    public function reindex(array $indexIds = null) : void;
+    public function reindex(?array $indexIds = null) : void;
 }
