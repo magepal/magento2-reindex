@@ -27,7 +27,7 @@ class Subscriber implements SubscriberInterface
     /**
      * @param array $indices
      */
-    public function processMessage(array $indices) : void
+    public function processMessage(?array $indices) : void
     {
         $this->reindexService->reindex($indices);
     }
